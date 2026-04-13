@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/aliatwood/Typescript-laboration2#readme",
   "devDependencies": {
+    "sass-embedded": "^1.99.0",
     "vite": "^8.0.8"
   }
 }
