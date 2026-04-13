@@ -19,7 +19,7 @@
     "url": "https://github.com/aliatwood/Typescript-laboration2/issues"
   },
   "homepage": "https://github.com/aliatwood/Typescript-laboration2#readme",
-  "dependencies": {
+  "devDependencies": {
     "vite": "^8.0.8"
   }
 }
