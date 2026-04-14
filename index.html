@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida</title>
+    <title>Todo app</title>
     <script type="module" src="src/main.ts"></script>
     <link rel="icon" href="src/pictures/favicon.png" type="image/png">
 </head>
 <body>
+    <header>
+        <nav class="menu">
+            <a href="index.html">Todo app</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Om oss</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">Todo app</h1>
+
+        <div>
+            <form class="todo">
+                <input type="text" id="todo-input" placeholder="Todo titel">
+                <select id="prioritet">
+                    <option value="1">Högsta prioritet</option>
+                    <option value="2">Medel prioritet</option>
+                    <option value="3">Lägsta prioritet</option>
+                </select>
+
+                <button type="submit">Lägg till todo</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Dina todos</h2>
+            <div id="container"></div>
+        </div>
+    </main>
+
+
+    
+    <footer>
+        <p>© All rights reserved</p>
+    </footer>
     
 </body>
 </html>

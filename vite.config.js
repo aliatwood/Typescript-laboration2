@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: "/Typescript-laboration1",
+    base: "/typescript-laboration2",
     build: {
         outDir: "docs"
     }
