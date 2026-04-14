@@ -3,7 +3,7 @@ import './styles/styles.scss';
 const formEl = document.querySelector(".todo-form") as HTMLFormElement;
 const inputEl = document.getElementById("todo-input") as HTMLInputElement;
 const selectEl = document.getElementById("prioritet") as HTMLSelectElement;
-const container = document.getElementById("container") as HTMLInputElement;
+const container = document.getElementById("container") as HTMLDivElement;
 const felmeddelandeEl = document.getElementById("felmeddelande") as HTMLParagraphElement;
 
 interface Todo{

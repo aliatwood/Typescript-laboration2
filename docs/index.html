@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="icon" href="/typescript-laboration2/assets/favicon-CXWU9Gyf.png" type="image/png">
+  <script type="module" crossorigin src="/typescript-laboration2/assets/index-p6ALhBaR.js"></script>
+  <link rel="stylesheet" crossorigin href="/typescript-laboration2/assets/index-BjIF_EFc.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="index.html">Todo app</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Om oss</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">Todo app</h1>
+
+        <div>
+            <form class="todo-form">
+                <input type="text" id="todo-input" placeholder="Todo titel">
+                <select id="prioritet">
+                    <option value="1">Högsta prioritet</option>
+                    <option value="2">Medel prioritet</option>
+                    <option value="3">Lägsta prioritet</option>
+                </select>
+                <p id="felmeddelande" style="display: none;">Vänligen fyll i alla fält korrekt! </p>
+
+                <button type="submit">Lägg till todo</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Dina todos</h2>
+            <div id="container"></div>
+        </div>
+    </main>
+
+
+    
+    <footer>
+        <p>© All rights reserved</p>
+    </footer>
+    
+</body>
+</html>

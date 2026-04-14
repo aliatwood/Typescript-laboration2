@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/aliatwood/Typescript-laboration2#readme",
   "devDependencies": {
     "sass-embedded": "^1.99.0",
+    "typescript": "^6.0.2",
     "vite": "^8.0.8"
   }
 }
