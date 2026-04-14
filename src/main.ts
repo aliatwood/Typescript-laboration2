@@ -25,11 +25,27 @@ class TodoList{
         }
     }
 
-    markTodoCompleted(todoIndex: number): void{
+    markTodoCompleted(todoIndex: number): void {
         this.todos[todoIndex].completed = true;
     }
 
     getTodos(): Todo[] {
         return this.todos;
     }
+
+    saveToLocalStorage(): void {
+        localStorage.setItem("todos", JSON.stringify(this.todos))
+    }
+
+    loadFromLocalStorage(): void {
+        let data = localStorage.getItem("todos")
+
+        if (data) {
+            this.todos = JSON.parse(data);
+        }
+    }
+
+    constructor() {
+    this.loadFromLocalStorage();
+  }
 }
