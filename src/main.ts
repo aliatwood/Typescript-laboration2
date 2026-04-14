@@ -30,6 +30,10 @@ class TodoList{
         this.todos[todoIndex].completed = true;
     }
 
+    removeTodo(todoIndex: number): void {
+        this.todos.splice(todoIndex, 1);
+    }
+
     getTodos(): Todo[] {
         return this.todos;
     }
@@ -53,6 +57,12 @@ class TodoList{
 
 const todoList = new TodoList();
 
+function getPriorityLabel(priority: number): string {
+    if (priority === 1) return "Hög 🔴";
+    if (priority === 2) return "Medel 🟡";
+    return "Låg 🟢";
+}
+
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -62,6 +72,7 @@ formEl.addEventListener("submit", (e) => {
     if (todoList.addTodo(task, priority)) {
         felmeddelandeEl.style.display = "none";
         inputEl.value = "";
+        todoList.saveToLocalStorage();
         renderTodos();
     } else {
         felmeddelandeEl.style.display = "block";
@@ -78,18 +89,26 @@ function renderTodos(): void{
 
         div.innerHTML = `
             <h3>${todo.task}</h3>
-            <p>${todo.priority}</p>
+            <p>${getPriorityLabel(todo.priority)}</p>
             <p>${todo.date}</p>
             <p>${todo.completed ? "Klar ✅" : "Ej Klar ❌"}</p>
-            <button>Markera som klar</button>
+            <button class="markera-btn">Markera som klar</button>
+            <button class="ta-bort-btn">Ta bort ❌</button>
         `;
 
-        const btn = div.querySelector("button") as HTMLButtonElement;
+        const btn = div.querySelector(".markera-btn") as HTMLButtonElement;
         btn.addEventListener("click", () => {
             todoList.markTodoCompleted(index);
             todoList.saveToLocalStorage();
             renderTodos();
         });
+
+        const bortBtn = div.querySelector(".ta-bort-btn") as HTMLButtonElement;
+        bortBtn.addEventListener("click", () => {
+        todoList.removeTodo(index);
+        todoList.saveToLocalStorage();
+        renderTodos();
+});
 
 
         container.appendChild(div);

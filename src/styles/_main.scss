@@ -65,6 +65,47 @@ body{
     }
 }
 
+.todos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 15px;
+    margin: 8px auto;
+    max-width: 700px;
+    background-color: #16213e;
+    border-radius: 8px;
+    border-left: 3px solid #e94560;
+
+    h3{
+        margin: 0;
+        color: #e94560;
+        min-width: 150px;
+        flex: 1;
+    }
+
+    p{
+        margin: 0;
+        color: #c0c0c0;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    button{
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #5c4a3a;
+        color: white;
+        border: none;
+        white-space: nowrap;
+
+        &:hover{
+            background-color: #7a6555;
+        }
+    }
+}
+
 footer{
     text-align: center;
     width: 100%;
@@ -76,5 +117,58 @@ footer{
 
     p{
         margin: 0;
+    }
+}
+
+@media (max-width: 1023px){
+    .todos{
+        max-width: 90%;
+        gap: 12px;
+
+        h3{
+            min-width: 120px;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .menu{
+        flex-direction: column;
+        height: auto;
+        padding: 1em 0;
+        gap: 0.5em;
+
+        a{
+            font-size: 1.2em;
+            padding: 0.4em 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #ffffff1a;
+
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    .todos{
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 90%;
+        gap: 6px;
+
+        button{
+            width: 100%;
+        }
+    }
+
+    .todo-form{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1em;
+
+        input, select, button{
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
 }
