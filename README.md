@@ -6,4 +6,4 @@ Uppgifterna har prioritet (1–3) och sparas i LocalStorage för att behålla da
 
 ## Publicerad webbplats
 Webbplatsen publiceras automatiskt via **GitHub Pages**.
-[Länk till den publicerade webbplatsen](https://aliatwood.github.io/Typescript-laboration2/)
+[Länk till den publicerade webbplatsen](https://aliatwood.github.io/Backend-laboration2-uppgift2/)
